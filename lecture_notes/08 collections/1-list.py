@@ -10,3 +10,4 @@ del ages[1]
 
 print(ages)
 
+print({ 'first': first, 'last': last })
