@@ -4,3 +4,9 @@ first = ages[0]
 last = ages[-1]
 
 print({ first, last })
+
+
+del ages[1]
+
+print(ages)
+
