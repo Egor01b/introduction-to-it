@@ -18,3 +18,4 @@ const ages = schoolAges.concat(studentAges);
 const { first, last } = getFirstAndLast(ages);
 console.log({ first, last });
 
+
