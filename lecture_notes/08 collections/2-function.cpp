@@ -2,7 +2,6 @@
 
 int *getFirstAndLast(int *array, int length)
 {
-
     int first = array[0];
     int last = array[length - 1];
     int returnvalue[] = {first, last};
