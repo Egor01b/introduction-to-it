@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Implementation
 
@@ -6,8 +6,6 @@ const getFirstAndLast = (array) => ({
   first: array[0],
   last: array[array.length - 1],
 });
-
-
 
 // Usage
 
@@ -19,3 +17,4 @@ const ages = schoolAges.concat(studentAges);
 
 const { first, last } = getFirstAndLast(ages);
 console.log({ first, last });
+
