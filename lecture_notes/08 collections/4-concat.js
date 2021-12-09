@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // Implementation
 
@@ -17,4 +17,5 @@ const ages = schoolAges.concat(studentAges);
 
 const { first, last } = getFirstAndLast(ages);
 console.log({ first, last });
+
 
