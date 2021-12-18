@@ -4,17 +4,13 @@
 const getValueBetween = (str, prefix, suffix) => {
   let index = str.indexOf(prefix);
   if (index === -1) return '';
-  else {
-    const resultStart = index + prefix.length;
-    str = str.substring(resultStart);
-    if (suffix) {
-      index = str.indexOf(suffix);
-      if (index === -1) {
-        return '';
-      } else {
-        str = str.substring(0, index);
-      }
-    }
+
+  const resultStart = index + prefix.length;
+  str = str.substring(resultStart);
+  if (suffix) {
+    index = str.indexOf(suffix);
+    if (index === -1) return '';
+    str = str.substring(0, index);
   }
   return str;
 };
