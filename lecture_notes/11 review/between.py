@@ -1,21 +1,28 @@
+
 # Extract substring between prefix and suffix
 
-def getValueBetween(str, prefix, suffix = None):
-  index = str.index(prefix)
-  if index == -1:
+def get_value_after(str, prefix):
+  prefix_start = str.find(prefix)
+  if prefix_start == -1:
     return ''
+  resultStart = prefix_start + len(prefix)
+  return str[resultStart:]
 
-  resultStart = index + len(prefix)
-  str = str[resultStart:]
+
+def get_value_before(str, suffix):
+  suffix_start = str.find(suffix)
+  if suffix_start == -1:
+    return ''
+  return str[0:suffix_start]
+
+
+def get_value_between(str, prefix, suffix = None):  
+  str = get_value_after(str, prefix)
   if suffix == None:
     return str
-
-  index = str.index(suffix)
-  if index == -1: 
-    return ''
-  str = str[0:index]
+  str = get_value_before(str, suffix)
   return str
 
-
-result = getValueBetween('Hello <username> and bye!', '<', '>')
+result = get_value_between('Hello <username> and bye!', '<', '>')
 print(result)
+
